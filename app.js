@@ -2,15 +2,15 @@ const express=require("express");
 
 
 const app=express();
-const port=process.env.port || 4000;
+const port=process.env.port || 8000;
 
 app.use(express.json());
 
 //connect with connection file of database
-require("./dbcon/connection");
+require("./src/dbcon/connection");
 
 //connect with mosel file of database
-const Customer = require("./db_schema/models");
+const Customer = require("./src/db_schema/models");
 
 
 
